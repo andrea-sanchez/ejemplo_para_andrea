@@ -1,6 +1,6 @@
 # Ejemplo para Andrea en Ciencia de Datos - GECI
 
-Para verificar que tu máquina se encuentra configurada correctamente, ejecuta el
+Para verificar que tu computadora se encuentra configurada correctamente, ejecuta el
 siguiente código en la terminal:
 
 ```bash
