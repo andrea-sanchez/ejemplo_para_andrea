@@ -1,4 +1,4 @@
-name: Ciencia de Datos - GECI
+name: Conservación de Islas
 on: [push, pull_request]
 
 jobs:
