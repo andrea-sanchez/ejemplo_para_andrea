@@ -1,8 +1,7 @@
 reports/reporte.pdf: reports/reporte.tex
-	pdflatex -output-directory=reports reports/reporte.tex 
+	pdflatex -output-directory=$(<D) $<
 	
 clean:
-	rm --force reports/reporte.aux
-	rm --force reports/reporte.log
-	rm --force reports/reporte.pdf
-	
+	rm --force reports/*.aux
+	rm --force reports/*.log
+	rm --force reports/*.pdf
