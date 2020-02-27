@@ -1,4 +1,7 @@
-.PHONY: foo
-
-foo:
-	/bin/echo -e "\n\n\xc2\xa1\x48\x6f\x6c\x61\x20\x4d\x75\x6e\x64\x6f\x21\n\n"
+reports/reporte.pdf: reports/reporte.tex
+	pdflatex -output-directory=$(<D) $<
+	
+clean:
+	rm --force reports/*.aux
+	rm --force reports/*.log
+	rm --force reports/*.pdf
