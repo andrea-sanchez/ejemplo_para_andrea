@@ -1,26 +1,51 @@
 \documentclass{article}
-    % General document formatting
-    \usepackage[margin=0.7in]{geometry}
-    \usepackage[parfill]{parskip}
-    \usepackage[utf8]{inputenc}
-    % Related to math
-    \usepackage{amsmath,amssymb,amsfonts,amsthm}
-    \renewcommand{\baselinestretch}{1.5}
+\usepackage[margin=0.7in]{geometry}
+\usepackage[parfill]{parskip}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\renewcommand{\baselinestretch}{1.5}
 \title{Reportes Semanales}
 \author{Andrea Sánchez}
 \begin{document}
 \maketitle
-    \textbf{Semana del 27 al 31 de Enero 2020:}\newline 
+    \textbf{Semana del 27 al 7 de Febrero 2020:} \\
     La meta principal para la primera semana de investigación fue preparar las herramientas computacionales para poder realizar las actividades planeadas a futuro, tales como la utilización de análisis estadístico para obtener información de datos empleando diferentes modelos matemáticos.
 
     El propósito de esto fue presentar, estudiar y detallar cada paso del seguimiento que se escolta para realizar una tarea. Las herramientas computacionales distinguidas que ofrecen orden y estructura al equipo son Git\footnote{Sistema de control de versiones.~\cite{bergh2019}} y Docker\footnote{Proyecto de código abierto que automatiza el despliegue de aplicaciones dentro de contenedores de software.~\cite{bergh2019}}.
         Estas heramientas son utilizadas para el análisis de datos eficiente ya que segmenta el proceso en pequeñas componentes.
 
-    Al utilizar Docker generamos un contenedor donde es posible trabajar bajo el mismo entorno, incluso cuando cada miembro labora con sistemas operativos diferentes. Por otro lado, en Git obtenemos las instrucciones que debe seguir el contenedor y así represente al equipo una plataforma ideal para terminar la tarea. Por ultimo, con GitKraken\footnote{Interfaz gráfica multiplataforma para Git desarrollada con Electron.~\cite{bergh2019}}, llevamos un registro de los cambios en los archivos dentro de un repositorio compartiendolos con todo el equipo, de modo que, se trabaja en conjunto en una sola tarea.
+    Al utilizar Docker generamos un contenedor donde es posible trabajar bajo el mismo entorno, incluso cuando cada miembro labora con sistemas operativos diferentes. Por otro lado, en Git obtenemos las instrucciones que debe seguir el contenedor y así represente al equipo una plataforma ideal para terminar la tarea. Por último, con GitKraken\footnote{Interfaz gráfica multiplataforma para Git desarrollada con Electron.~\cite{bergh2019}}, llevamos un registro de los cambios en los archivos dentro de un repositorio compartiendolos con todo el equipo, de modo que, se trabaja en conjunto en una sola tarea.
     El objetivo de todo lo anterior es poder trabajar de manera interactiva y remota con el equipo de Ciencia de Datos, reduciciendo el tiempo en el ciclo de análisis para mejorar la calidad.
+\\ \\ 
+    \textbf{Semana del 10 al 16 de Febrero 2020:} \\
+    Durante la segunda semana se llevo a cabo un ejercicio simulacro con la intención de aprender las disciplinas que se siguen en el flujo de acciones de un repositorio. Como se comentó, para poder trabajar de manera simultánea con el equipo, se tiene acceso a diversas herramientas computaciones que permiten seguir un orden, es ahí donde entra la metodología de GitFlow \footnote{Flujo de trabajo aplicado a un repositorio} con la finalidad de ayudar virtualmente en todos los aspectos a dirigir un proyecto: comunicación entre los desarrolladores, estabilidad en el código, administración de fallas y autorización en los cambios realizados.
 
+     El flujo de trabajo con GitFlow se basa en dos ramas principales: la develop y la master. En conjunto con las ramas principales, existe un subconjunto de ramas de apoyo: feature, release y hotfix. Su objetivo es conceder el desarrollo paralelo entre los integrantes del equipo y la resolución rápida ante conflictos. A diferencia de las ramas principales, estas son eliminadas provisionalmente.
+    La rama develop es donde convergen mediante un feature los nuevos resultados o características que se desarrollen y que aumentan la deuda técnica \footnote{Concepto en el desarrollo de software que refleja el costo implícito del retrabajo adicional causado por elegir una solución fácil} generalmente. Por otro lado, la master estiba cada una de las versiones estables del repositorio, es decir, se solucionan errores o mejoras por medio de un hotfix o release, donde se refactoriza código y se enriquecen archivos o reportes, con el propósito de disminuir la deuda técnica generada. 
+    \\ \\ 
+    \textbf{Semana del 17 al 23 de Febrero 2020:} \\
+   La tercera semana de trabajo se utilizo para el estudio del análisis probabilístico de regresión logística \footnote{Tipo de análisis de regresión utilizado para predecir el resultado de una variable categórica}, con la finalidad de comprender cómo este predice el resultado de variables binarias en función de las variables independientes, para así ser aplicado en la predicción del sexo de un mamífero a partir de medidas morfométricas. 
+    Se optó por emplear regresión logística porque se busca obtener una clasificación de sexo en aves Laysan a partir de medidas morfométricas como ancho del pico, longitud de la cabeza, longitud de pecho, entre otras cinco variables como características disponibles para el modelo. Además, se utiliza un valor umbral con el objetivo de que los individuos con el valor de probabilidad que esté por encima del umbral se consideren machos y en caso contrario hembras.
+\\ \\
+    \textbf{Semana del 24 de Febrero al 30 de Marzo 2020:} \\
+    En la cuarta semana se empezó a desarrollar el repositorio de Dimorfismo, en el cual se reflejará la mayor parte del trabajo del proyecto de vinculación. Para crear el repositorio fue necesario agregar las instrucciones que debe seguir el contenedor y así represente la plataforma ideal para realizar la tarea; por el momento, se cargó con las herramientas suficientes para poder correr los programas en R y el archivo .tex .
+    Además, se extendió matemáticamente la función logística hasta llegar a su modo grueso, explicando de dónde proviene cada una de sus variables y cómo esta encaja en el resultado que buscamos. La intensión es que sea sencillo para el lector identificar el empleo del modelo de regresión logística en la predicción de sexo en aves a partir de medidas morfométricas. 
+    \\ \\
+    \textbf{Semana del 31 al 6 de Marzo 2020:} \\
+    Durante la quinta semana se siguió el Manual de Curación de Datos del equipo de Ciencia de datos de GECI, con la finalidad de estudiar el proceso a seguir en una curación de datos correcta, utilizando como ejemplar la base de datos recolectada por el equipo de campo, donde se encuentran siete medidas morfométricas de 135 aves Laysan.
+    El procedimiento ocurre en cinco pasos. Primero se elabora una verificación estructural, donde se comprueba que no existan celdas duplicadas, columnas en blanco, valores extras o faltantes y dobles encabezamientos, con la finalidad de no proporcionar información falsa al modelo empleado. También, se realizan pruebas en el comando de Good Tables por medio de la terminal, con el fin de validar y encontrar errores estructurales en la base de datos.
+    Después, bajo el mismo comando, se crea el archivo datapackage.json con el propósito de asignar un nombre, tipo y formato a cada columna, y así, especificar el contenido de la base de datos. Más aún, se obtiene los metadatos de la base de datos, es decir, toda la información adicional que no proporciona algo al modelo de predicción pero sí representa información durante el análisis de resultados, como por ejemplo: el código de Darvic de un ave o la posición geográfica de captura.
+    Por último, se realiza la prueba geci-validate que valida todos los cambios anteriores sean correctos para así poder consignar el resultado en el repositorio sin ningún error. 
+    \\ \\
+    \textbf{Semana del 6 al 17 de Marzo 2020:} \\
+    Durante la sexta y séptima semana se tomaron cursos didácticos en la plataforma en línea DataCamp \footnote{Web dirigida al aprendizaje de lenguajes de programación orientados al análisis de datos} para estudiar de forma introductoria el lenguaje R \footnote{Entorno y lenguaje de programación con un enfoque al análisis estadístico} y algunas de sus librerías, con la finalidad de ser utilizados como herramientas en la resolución del modelo de regresión logística.
+
+    Para el proyecto se prefirió laborar con este lenguaje porque proporciona un amplio abanico de herramientas estadísticas y gráficas relacionados en campos de modelos lineales y no lineales, pruebas estadísticas, algoritmos de clasificación y agrupamiento, lo cual facilita la programación y gráfico del modelo. Además, en R puede integrarse con distintas bases de datos y existen librerías que facilitan su empleo desde lenguajes de programación interpretados como Python, lo cual es conveniente para el repositorio al trabajarse con archivos .csv y .json .
+
+    Una de las librerías básicas en R para el análisis de datos es Tidyverse, que permite la manipulación, exploración y visualización de datos que comparten algo en común. Dentro de está librería, se encuentran los paquetes ggplot 2 y tidyr. Por parte de ggplot2 se obtiene una gramática de gráficos, es decir, cubre todos los aspectos de la exploración de datos y de expresar sus soluciones lo cual es útil en el proyecto al poder representar una tabla o gráfico de resultados e información de manera directa y detallista. Por otro lado, tidyr resume la mayor parte de las tareas que se realizan en análisis de datos, principalmente creando datos ordenados, describiendo una forma estándar de almacenar datos con la finalidad de hacer el proceso de programación eficiente, ligero y ágil.
+    Se concluyó la actividad describiendo línea por línea el curso que siguen los programas en el repositorio muestra del proyecto, analizando qué herramientas de las librerías en R pudieran simplificar el código ya creado.
 
 \begin{thebibliography}{1} 
-\bibitem{bergh2019} Bergh, C., Benghiat, G., \& Strod, E. (2019). The Data OPS Cookbook.. Cambridge, MA, EUA: DataKitchen Headquarters.
+\bibitem{bergh2019} Bergh, C., Benghiat, G., \& Strod, E. (2019). The DataOps Cookbook.. Cambridge, MA, EUA: DataKitchen Headquarters.
 \end{thebibliography}
 \end{document}
