@@ -39,7 +39,6 @@
     El procedimiento ocurre en cinco pasos. Primero se elabora una verificación estructural, donde se comprueba que no existan celdas duplicadas, columnas en blanco, valores extras o faltantes y dobles encabezamientos. Esto con la finalidad de no proporcionar información falsa al modelo empleado. 
     Después, utilizando \texttt{good\_tables}, se crea el archivo \texttt{datapackage.json} con el propósito de asignar un nombre, tipo y formato a cada columna, y así, especificar el contenido de la base de datos. Más aún, se definen los metadatos de cada columna, es decir, toda la información adicional que no proporciona algo al modelo de predicción pero sí representa información durante el análisis de resultados, como por ejemplo: el código de Darvic de un ave o la posición geográfica de captura.
     Por último, se realiza la prueba \texttt{geci-validate} para validar  que el tipo de formato sea correcto para cada columna y revisar que las restricciones \textit{(constrains)} correspondan con los datos de esa columna. Al pasar las pruebas, el archivo \texttt{datapackage.json} está listo para ser conignado.
-
     \\ \\
     
     \textbf{Semana del 9 al 13 de marzo del 2020:} \\
