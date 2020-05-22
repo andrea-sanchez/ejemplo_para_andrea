@@ -1,26 +1,79 @@
 \documentclass{article}
-    % General document formatting
-    \usepackage[margin=0.7in]{geometry}
-    \usepackage[parfill]{parskip}
-    \usepackage[utf8]{inputenc}
-    % Related to math
-    \usepackage{amsmath,amssymb,amsfonts,amsthm}
-    \renewcommand{\baselinestretch}{1.5}
+\usepackage[margin=0.7in]{geometry}
+\usepackage[parfill]{parskip}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage[usenames]{color}
+\usepackage[hidelinks]{hyperref}
+\renewcommand{\baselinestretch}{1.5}
 \title{Reportes Semanales}
 \author{Andrea Sánchez}
 \begin{document}
 \maketitle
-    \textbf{Semana del 27 al 31 de Enero 2020:}\newline 
+    \textbf{Semana del 27 al 7 de febrero del 2020:} \\
     La meta principal para la primera semana de investigación fue preparar las herramientas computacionales para poder realizar las actividades planeadas a futuro, tales como la utilización de análisis estadístico para obtener información de datos empleando diferentes modelos matemáticos.
 
     El propósito de esto fue presentar, estudiar y detallar cada paso del seguimiento que se escolta para realizar una tarea. Las herramientas computacionales distinguidas que ofrecen orden y estructura al equipo son Git\footnote{Sistema de control de versiones.~\cite{bergh2019}} y Docker\footnote{Proyecto de código abierto que automatiza el despliegue de aplicaciones dentro de contenedores de software.~\cite{bergh2019}}.
         Estas heramientas son utilizadas para el análisis de datos eficiente ya que segmenta el proceso en pequeñas componentes.
 
-    Al utilizar Docker generamos un contenedor donde es posible trabajar bajo el mismo entorno, incluso cuando cada miembro labora con sistemas operativos diferentes. Por otro lado, en Git obtenemos las instrucciones que debe seguir el contenedor y así represente al equipo una plataforma ideal para terminar la tarea. Por ultimo, con GitKraken\footnote{Interfaz gráfica multiplataforma para Git desarrollada con Electron.~\cite{bergh2019}}, llevamos un registro de los cambios en los archivos dentro de un repositorio compartiendolos con todo el equipo, de modo que, se trabaja en conjunto en una sola tarea.
+    Al utilizar Docker generamos un contenedor donde es posible trabajar bajo el mismo entorno, incluso cuando cada miembro labora con sistemas operativos diferentes. Por otro lado, con GitKraken\footnote{Interfaz gráfica multiplataforma para Git desarrollada con Electron.~\cite{bergh2019}}, llevamos un registro de los cambios en los archivos dentro de un repositorio compartiendolos con todo el equipo, de modo que, representa la plataforma ideal para trabajar en conjunto una sola tarea.
     El objetivo de todo lo anterior es poder trabajar de manera interactiva y remota con el equipo de Ciencia de Datos, reduciciendo el tiempo en el ciclo de análisis para mejorar la calidad.
+\\ \\ 
+    \textbf{Semana del 10 al 16 de febrero del 2020:} \\
+    Durante la segunda semana se llevó a cabo un ejercicio simulacro con la intención de aprender las disciplinas que se siguen en el flujo de trabajo de un repositorio. Como se comentó, para poder trabajar de manera simultánea con el equipo, se tiene acceso a diversas herramientas computaciones que permiten seguir un orden, es ahí donde entra la metodología de GitFlow \footnote{Flujo de trabajo aplicado a un repositorio} con la finalidad de ayudar virtualmente en todos los aspectos a dirigir un proyecto: comunicación entre los desarrolladores, estabilidad en el código, administración de fallas y autorización en los cambios realizados.
 
+     El flujo de trabajo con GitFlow se basa en dos ramas principales: la \textit{develop} y la \textit{master}. En conjunto con las ramas principales, existe un subconjunto de ramas de apoyo: \textit{feature}, \textit{release} y \textit{hotfix}. Su objetivo es conceder el desarrollo paralelo entre los integrantes del equipo y la resolución rápida ante conflictos. A diferencia de las ramas principales, estas son eliminadas provisionalmente.
+    La rama \textit{develop} es donde convergen mediante un \textit{feature} los nuevos resultados o características que se desarrollen y que aumentan la deuda técnica \footnote{Concepto en el desarrollo de software que refleja el costo implícito del retrabajo adicional causado por elegir una solución fácil} generalmente. Por otro lado, la \textit{master} estiba cada una de las versiones estables del repositorio, es decir, se solucionan errores o mejoras por medio de un \textit{hotfix} o \textit{release}, donde se refactoriza código y se enriquecen archivos o reportes, con el propósito de disminuir la deuda técnica generada. 
+    \\ \\ 
+    \textbf{Semana del 17 al 23 de febrero del 2020:} \\
+   La tercera semana de trabajo se utilizó para el estudio del análisis probabilístico de regresión logística \footnote{Tipo de análisis de regresión utilizado para predecir el resultado de una variable categórica}. Con el objetivo de comprender cómo este estima la probabilidad de una variable cualitativa binaria en función de una variable cuantitativa, para así ser aplicado en la predicción del sexo de una ave marina a partir de medidas morfométricas.
+   
+   Se busca clasificar el sexo de Albatros de Laysan utilizando medidas morfometrícas como: ancho del pico, longitud de la cabeza, longitud de pecho, entre otras. Es importante tener en cuenta que, aunque la regresión logística permite clasificar, se trata de un modelo de regresión que modela el logaritmo de la probabilidad de pertenecer a cada grupo. La asignación final se hace en función de las probabilidades predichas. Además, se utiliza un valor umbral, con base en la matriz de confusión obtenida, con finalidad de que los individuos con el valor de probabilidad que esté por encima del valor umbral se consideren machos y en caso contrario hembras.
+\\ \\
+    \textbf{Semana del 24 al 28 de febrero del 2020:} \\
+    En la cuarta semana se empezó a desarrollar el repositorio de \href{https://github.com/IslasGECI/dimorfismo}{\textcolor{cyan}{\underline{\texttt{dimorfismo}}}}, en el cual se reflejará la mayor parte del trabajo del proyecto de vinculación. Para crear el repositorio fue necesario agregar las instrucciones que debe seguir el contenedor y así represente la plataforma ideal para realizar la tarea; por el momento, se cargó con las herramientas suficientes para poder correr los programas en R y el archivo .tex .
+    Además, se extendió matemáticamente la función logística hasta llegar a su modo grueso, explicando de dónde proviene cada una de sus variables y cómo esta encaja en el resultado que buscamos. La intensión es que sea sencillo para el lector identificar el empleo del modelo de regresión logística en la predicción de sexo en Albatros a partir de medidas morfométricas. 
+    \\ \\
+    \textbf{Semana del 2 al 6 de marzo del 2020:} \\
+    Durante la quinta semana se siguió el Manual de Curación de Datos del equipo de Ciencia de datos de GECI, con la finalidad de estudiar el proceso a seguir en una curación de datos correcta. Utilizando como ejemplar la base de datos recolectada por el equipo de campo, donde se encuentran siete medidas morfométricas de 135 Albatros de Laysan de Isla Guadalupe.
+    El procedimiento ocurre en cinco pasos. Primero se elabora una verificación estructural, donde se comprueba que no existan celdas duplicadas, columnas en blanco, valores extras o faltantes y dobles encabezamientos. Esto con la finalidad de no proporcionar información falsa al modelo empleado. 
+    Después, utilizando \texttt{good\_tables}, se crea el archivo \texttt{datapackage.json} con el propósito de asignar un nombre, tipo y formato a cada columna, y así, especificar el contenido de la base de datos. Más aún, se definen los metadatos de cada columna, es decir, toda la información adicional que no proporciona algo al modelo de predicción pero sí representa información durante el análisis de resultados, como por ejemplo: el código de Darvic de un ave o la posición geográfica de captura.
+    Por último, se realiza la prueba \texttt{geci-validate} para validar  que el tipo de formato sea correcto para cada columna y revisar que las restricciones \textit{(constrains)} correspondan con los datos de esa columna. Al pasar las pruebas, el archivo \texttt{datapackage.json} está listo para ser conignado.
+    \\ \\
+    
+    \textbf{Semana del 9 al 13 de marzo del 2020:} \\
+    Durante la sexta semana se tomaron cursos didácticos en la plataforma en línea \textit{DataCamp} \footnote{Web dirigida al aprendizaje de lenguajes de programación orientados al análisis de datos} para estudiar de forma introductoria el lenguaje R \footnote{Entorno y lenguaje de programación con un enfoque al análisis estadístico} y algunas de sus librerías, con la finalidad de ser utilizados como herramientas en la resolución del modelo de regresión logística.
 
+    Para el proyecto se prefirió laborar con este lenguaje porque proporciona un amplio abanico de herramientas estadísticas y gráficas relacionados en campos de modelos lineales y no lineales, pruebas estadísticas, algoritmos de clasificación y agrupamiento. Además, R cuenta con amplias librerias que permiten trabajar con archivos de diversas extensiones, lo cual es conveniente para el repositorio al manejar archivos \texttt{.csv} y \texttt{.json}.
+
+    Una de las librerías básicas en R para el análisis de datos es \textit{Tidyverse}, que permite la manipulación, exploración y visualización de datos que comparten algo en común. Dentro de esta librería, se encuentran los paquetes \texttt{ggplot2} y \texttt{tidyr}. Por parte de \texttt{ggplot2} se obtiene una gramática de gráficos, lo cual es conveniente en el proyecto al poder representar resultados de manera gráfica e información de forma visual y detallada.
+    
+    Por otro lado, \texttt{tidyr} resume la mayor parte de las tareas que se realizan en análisis de datos, principalmente creando datos ordenados, describiendo una forma estándar de almacenar datos con la finalidad de hacer el proceso de programación eficiente, ligero y ágil.
+    Se concluyó la actividad describiendo línea por línea el curso que siguen los programas en el repositorio muestra del proyecto, analizando qué herramientas de las librerías en R pudieran simplificar el código ya creado.
+
+    \textbf{Semana  del 16 al 20 de marzo del 2020} \\
+    En la séptima semana de trabajo con el archivo \texttt{Makefile}, en su simplificación y estructura. El \texttt{Makefile} es una herramienta que, por defecto, ejecuta una serie de comandos para construir un archivo final a partir de otros resultados. También debe incluir un listado de dependencias que se utilizan como entrada de dichos comandos.
+    
+    Esto nos permite desde instalar y ejecutar programas, limpieza de archivos temporales, y toda aquella instrucción que la terminal sea capaz de entender. Además, su objetivo principal es la automatización de tareas y cuidado del sistema. 
+    
+    Para sintetizar aún más el archivo \texttt{Makefile} se introdujeron variables automatizadas, que asignan una instrucción procediente del sistema local, en este caso\texttt{Linux}. También, se agregaron funciones que generan o calculan una sección del \texttt{Make} de manera independiente al resto del archivo, para así reducir el peso que podía llegar a tenar una sola línea de instrucción.
+    
+    \textbf{Semana  del 30 de marzo al 8 de abril del 2020} \\
+    En la novena semana inició a trabajar con los \textit{scripts} de R, enfocándose en mostrar los archivos de resultados procesados, con el objetivo de encontrar al estilo de "caja negra" un error en ellos.
+    
+    Para poder realizar la tarea, se modificó el archivo \texttt{Dockerfile} y \texttt{Makefile}, agregando la instalación de \texttt{pythontex}. Esta herramienta permite correr código de Python dentro de un archivo Latex. Se optó por utilizar el lenguaje de Python por la comodidad que ofrece para trabajar con las extensiones de archivos \texttt{.csv} y \texttt{.json}, permitiendo extraer su información y guardarla dentro de una variable e imprimir el valor en el reporte. Con esto, se implementaron tablas de valores donde se analiza el comportamiento de las medidas morfométricas antes y después de ser nomalizadas. Mostramos los valores mínimos, máximos, estimados y error estándar de cada uno de ellas.
+    Al finalizar el objetivo, se encontró que los archivos \texttt{.json} tienen un error en su programación, ya que en dos medidas morfométricas se producen al revés los valores mínimos y máximos, lo cual se debe corregir.
+    
+    Por otro lado, se trabaja en conjunto con el desarrollo de una aplicación que permita introducir nuevos datos al modelo y éste genere una respuesta de manera inmediata, con la finalidad de reducir tiempo de labor y  facilitar al equipo de campo la exploración.
+    
+    \textbf{Semana del 13 al 17 de abril del 2020} \\
+    La décima semana de trabajo se enfocó en enriquecer el archivo \texttt{datapackage.json} con la finalidad de actualizar y mejorar sus componentes, encontrando anomalías que causaran conflicto para continuar con el proceso semi-automatizado.
+    
+    Para comenzar, se agregaron restricciones sobre qué datos serán aceptados y bajo qué criterios, para así, hacer más práctico localizar y corregir errores que pudieran aparecer en la captura de datos, de modo que, se puede tener una base de datos consistente. Para poder lograr esto, a cada medida morfológica se le marcó el valor máximo y mínimo que puede tomar según la base de datos cruda. También, al tener las variables \texttt{Temporada} y \texttt{Darvic} valores tipo \textit{string} (cadena de texto), se decidió construir un formato por medio de restricciones de patrón, donde se asigna el valor o símbolo que puede tomar utilizando expresiones regulares que proporcionan una manera muy flexible de buscar o reconocer cadenas de texto.
+    
+    Después, siguiendo el \href{https://docs.google.com/document/d/1A1JZQY_CZ0d_Mb_LW7WKS8r9ulPp6QvijFYbGCzR2yo/edit}{\textcolor{cyan}{\underline{\texttt{Manual de Curación de Datos de GECI}}}}, se exigen cuatro metadatos en la sección de columnas (\texttt{\textsl{name}}, \texttt{\textsl{description}}, \texttt{\textsl{long\_name}} y \texttt{nombre\_largo}) de forma obligatoria, por lo que se investigó y generó la información faltante para cumplir los requisitos. Por último, se verificó que los cambios fueran correctos utilizando el comando \texttt{geci-validate}.
+    
 \begin{thebibliography}{1} 
-\bibitem{bergh2019} Bergh, C., Benghiat, G., \& Strod, E. (2019). The Data OPS Cookbook.. Cambridge, MA, EUA: DataKitchen Headquarters.
+\bibitem{bergh2019} Bergh, C., Benghiat, G., \& Strod, E. (2019). The DataOps Cookbook.. Cambridge, MA, EUA: DataKitchen Headquarters.
 \end{thebibliography}
 \end{document}
