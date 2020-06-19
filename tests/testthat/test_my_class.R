@@ -1,5 +1,5 @@
-source("../../src/functions/dimorfismo.R")
-Mi_Primera_Clase <- My_First_Class$new() 
+source("../../src/functions/ejemplo_para_andrea.R")
+Mi_Primera_Clase <- My_First_Class$new()
 test_that("Que tengan los requerimientos para POO",
     {
         expect_true(is_library("tidyverse"))
